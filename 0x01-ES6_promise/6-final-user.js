@@ -11,7 +11,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       if (result.status === 'fulfilled') {
         newarr.push({ status: result.status, value: result.value });
       } else {
-        newarr.push({ status: result.status, value: result.reason });
+        newarr.push({ status: result.status, value: `${result.reason}` });
       }
     });
     return newarr;
