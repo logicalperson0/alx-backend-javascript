@@ -8,11 +8,12 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled([user, photo]).then((results) => {
     const newarr = [];
     results.forEach((result) => {
-      if (result === 'fulfilled') {
+      if (result.status === 'fulfilled') {
         newarr.push({ status: result.status, value: result.value });
       } else {
-        newarr.push({ status: result.status, value: `${result.reason}` });
+        newarr.push({ status: result.status, value: result.reason });
       }
     });
+    return newarr;
   });
 }
