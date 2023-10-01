@@ -10,4 +10,8 @@ export default class Building {
   get sqrt() {
     return this._sqrt;
   }
+
+  set sqrt(sqrt) {
+    this._sqrt = sqrt;
+  }
 }
