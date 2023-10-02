@@ -7,7 +7,7 @@ export default function updateStudentGradeByCity(Students, city, newGrades) {
     const filgra = newGrades.filter((grades) => grades.studentId === value.id);
 
     if (filgra.length > 0) {
-      return ({ ...value, grade: filgra[0] });
+      return ({ ...value, grade: filgra[0].grade });
     }
     return ({ ...value, grade: 'N/A' });
   }
