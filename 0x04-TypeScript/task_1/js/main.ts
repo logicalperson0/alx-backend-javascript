@@ -19,9 +19,15 @@ function printTeacher(firstName: string, lastName: string) {
 
 interface printTeacherFunction {}
 
-class StudentClass {
+
+interface Studclass {
   firstName: string;
   lastName: string;
+}
+
+class StudentClass implements Studclass {
+  firstName;
+  lastName;
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
