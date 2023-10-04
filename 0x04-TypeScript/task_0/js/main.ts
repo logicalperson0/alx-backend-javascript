@@ -8,12 +8,12 @@ interface Student {
 function createstudents(student: Student) {
   firstname: student.firstName;
   lastname: student.lastName;
-  age: student.age;
-  location: student.location;
+  ages: student.age;
+  locations: student.location;
 }
 
-const student1 = createstudents({ firstname: 'Moses', lastname: 'smith', age: 40, location: 'NY' });
-const student2 = createstudents({ firstname: 'Noah', lastname: 'xersus', age: 80, location: 'Tokyo' });
+const student1 = createstudents({ firstname: 'Moses', lastname: 'smith', ages: 40, locations: 'NY' });
+const student2 = createstudents({ firstname: 'Noah', lastname: 'xersus', ages: 80, locations: 'Tokyo' });
 
 const studentsList = [student1, student2];
 
