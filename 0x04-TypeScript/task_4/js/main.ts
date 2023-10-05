@@ -13,3 +13,17 @@ let cTeacher: Subjects.Teacher {
     lastName = 'Smith',
     experienceTeachingC = 10,
 }
+
+console.log('C++');
+
+Cpp.setTeacher = cTeacher;
+console.log(Cpp.getRequirements());
+console.log(Cpp.getAvailableTeacher());
+
+Java.setTeacher = cTeacher;
+console.log(Java.getRequirements());
+console.log(Java.getAvailableTeacher());
+
+React.setTeacher = cTeacher;
+console.log(React.getRequirements());
+console.log(React.getAvailableTeacher());
