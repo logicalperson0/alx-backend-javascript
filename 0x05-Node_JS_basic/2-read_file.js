@@ -19,7 +19,7 @@ function countStudents(patharg) {
         if (!fields[field]) {
           fields[field] = {
             cou: 1,
-            stu: [fn]
+            stu: [fn],
           };
         } else {
           const newcou = fields[field].cou + 1;
@@ -27,7 +27,7 @@ function countStudents(patharg) {
 
           fields[field] = {
             cou: newcou,
-            stu: newstu
+            stu: newstu,
           };
         }
       }
