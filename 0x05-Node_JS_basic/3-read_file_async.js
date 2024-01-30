@@ -1,7 +1,7 @@
 /* eslint-env node */
 const fs = require('fs');
 
-function countStudents(patharg) {
+function countStudents (patharg) {
   const prom = new Promise((resolve, reject) => {
     // to read it asynchronously
     fs.readFile(patharg, 'utf-8', (err, line) => {
