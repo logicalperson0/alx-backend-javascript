@@ -13,6 +13,7 @@ const countStudents = (patharg) => {
         let x = 0;
         const fields = {};
         let countStu = 0;
+        let mess = '';
 
         const lines = () => {
           for (x in data) {
@@ -48,6 +49,7 @@ const countStudents = (patharg) => {
         const tolog = async () => {
           lines();
           console.log(`Number of students: ${countStu}`);
+          mess += `Number of students: ${countStu}\n`;
 
           // accessing fields object keys, and assigning cou to num
           // and joining the first names with , to stufn
@@ -56,11 +58,13 @@ const countStudents = (patharg) => {
             const stuFn = fields[fi].stu.join(', ');
 
             console.log(`Number of students in ${fi}: ${num}. List: ${stuFn}`);
+            mess += `Number of students in ${fi}: ${num}. List: ${stuFn}\n`;
           }
+          //mess = mess.slice(0, -1);
         };
         // call out the asynchronous func
         tolog();
-        resolve(true);
+        resolve(mess);
       }
     });
   });
