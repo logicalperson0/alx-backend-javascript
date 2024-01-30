@@ -1,4 +1,4 @@
-function displayMessage (str) {
+function displayMessage(str) {
   console.log(str);
 }
 // eslint-disable-next-line no-undef
