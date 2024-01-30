@@ -60,7 +60,7 @@ const countStudents = (patharg) => {
             console.log(`Number of students in ${fi}: ${num}. List: ${stuFn}`);
             mess += `Number of students in ${fi}: ${num}. List: ${stuFn}\n`;
           }
-          //mess = mess.slice(0, -1);
+          // mess = mess.slice(0, -1);
         };
         // call out the asynchronous func
         tolog();
