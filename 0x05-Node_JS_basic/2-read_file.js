@@ -1,7 +1,7 @@
 /* eslint-env node */
 const fs = require('fs');
 
-function countStudents(patharg) {
+const countStudents = (patharg) => {
   try {
     const data = fs.readFileSync(patharg, { encoding: 'utf-8' }).split('\n');
     // console.log(data);
@@ -50,6 +50,6 @@ function countStudents(patharg) {
   } catch (error) {
     throw new Error('Cannot load the database');
   }
-}
+};
 
 module.exports = countStudents;
