@@ -10,24 +10,28 @@ function countStudents(patharg) {
     let countStu = 0;
 
     for (x in data) {
+      // no empty lines plus the 1st line should not print
       if (data[x] !== '' && x > 0) {
         const van = data[x].split(',');
+        // grouping the fields and firstNames to variables
         const field = van[3];
         const fn = van[0];
         countStu += 1;
 
+        // to check if a specific field exists, if not then new field
         if (!fields[field]) {
           fields[field] = {
             cou: 1,
-            stu: [fn],
+            stu: [fn]
           };
+          // if field exists then add to it the first name and count
         } else {
           const newcou = fields[field].cou + 1;
           const newstu = (fields[field].stu).concat(fn);
 
           fields[field] = {
             cou: newcou,
-            stu: newstu,
+            stu: newstu
           };
         }
       }
@@ -35,6 +39,8 @@ function countStudents(patharg) {
     }
     console.log(`Number of students: ${countStu}`);
 
+    // accessing fields object keys, and assigning cou to num
+    // and joining the first names with , to stufn
     for (const fi of Object.keys(fields)) {
       const num = fields[fi].cou;
       const stuFn = fields[fi].stu.join(', ');
