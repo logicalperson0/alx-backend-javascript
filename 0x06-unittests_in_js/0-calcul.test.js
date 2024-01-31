@@ -19,4 +19,8 @@ describe('calNum()', function() {
     const result = calNum(1.5, 3.7);
     assert.strictEqual(result, 6);
   });
+  it(`chk if result is same as excepted`, function() {
+    const res = calNum(-1.4, -1.3);
+    assert.strictEqual(res, -2);
+  });
 });
