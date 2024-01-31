@@ -9,7 +9,7 @@ const countStudents = (patharg) => {
     const fields = {};
     let countStu = 0;
 
-    for (x in data) {
+    for (x in data) { // eslint-disable-line
       // no empty lines plus the 1st line should not print
       if (data[x] !== '' && x > 0) {
         const van = data[x].split(',');
@@ -22,7 +22,7 @@ const countStudents = (patharg) => {
         if (!fields[field]) {
           fields[field] = {
             cou: 1,
-            stu: [fn]
+            stu: [fn],
           };
           // if field exists then add to it the first name and count
         } else {
@@ -31,7 +31,7 @@ const countStudents = (patharg) => {
 
           fields[field] = {
             cou: newcou,
-            stu: newstu
+            stu: newstu,
           };
         }
       }
